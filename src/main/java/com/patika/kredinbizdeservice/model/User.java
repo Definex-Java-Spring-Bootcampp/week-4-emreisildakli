@@ -7,12 +7,13 @@ public class User {
 
     private String name;
     private String surname;
-   // private LocalDate birthDate;
+    // private LocalDate birthDate;
     private String email; //bir email ile bir kere kayıt olunabilir.
     private String password; //hash fonskiyonlarından biri ile hashlanecek.
     private String phoneNumber;
     private Boolean isActive;
     private List<Application> applicationList;
+    private Long userId;
 
     public User() {
     }
@@ -20,7 +21,7 @@ public class User {
     public User(String name, String surname, LocalDate birthDate, String email, String password, String phoneNumber, Boolean isActive) {
         this.name = name;
         this.surname = surname;
-      ///  this.birthDate = birthDate;
+        ///  this.birthDate = birthDate;
         this.email = email;
         this.password = password;
         this.phoneNumber = phoneNumber;
@@ -83,20 +84,29 @@ public class User {
     public void setActive(Boolean active) {
         isActive = active;
     }
-/*
-    public LocalDate getBirthDate() {
-        return birthDate;
-    }
 
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
-    }
-*/
+    /*
+        public LocalDate getBirthDate() {
+            return birthDate;
+        }
+
+        public void setBirthDate(LocalDate birthDate) {
+            this.birthDate = birthDate;
+        }
+    */
     public List<Application> getApplicationList() {
         return applicationList;
     }
 
     public void setApplicationList(List<Application> applicationList) {
         this.applicationList = applicationList;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 }

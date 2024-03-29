@@ -2,7 +2,7 @@ package com.patika.kredinbizdeservice.exceptions;
 
 public class KredinbizdeException extends RuntimeException {
 
-    private String message;
+    private final String message;
 
     public KredinbizdeException(String message) {
         super(message);

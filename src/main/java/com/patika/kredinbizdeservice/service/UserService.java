@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 
 @Service
 @Scope(value = "singleton")
@@ -25,6 +26,8 @@ public class UserService {
 
     public User save(User user) {
         System.out.println("userRepository: " + userRepository.hashCode());
+
+        user.setUserId(new Random().nextLong());
 
         userRepository.save(user);
 
@@ -58,15 +61,7 @@ public class UserService {
             user = foundUser.get();
         }
 
-        //throw new RuntimeException();
-
-        // throw new NullPointerException();
-
-         throw new IllegalArgumentException("exception fırlatıldı");
-
-        // throw new ArithmeticException();
-
-       // return user;
+        return user;
 
     }
 
