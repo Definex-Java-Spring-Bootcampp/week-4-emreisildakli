@@ -20,3 +20,23 @@
 ---
 *Eğitmen - Cem DIRMAN*  
 *Kolay Gelsin*
+
+
+## The Diagram Of The App
+
+<img width="816" alt="Screen Shot 2024-04-09 at 14 04 43" src="https://github.com/Definex-Java-Spring-Bootcampp/week-4-emreisildakli/assets/70077951/0d7e537d-2e70-40a3-b8b6-d9083ea48b63">
+
+## Endpoints
+
+### Save application
+POST - localhost:8080/api/applications
+
+### Get applications by email
+GET - localhost:8080/api/applications/${email}
+
+### Save user
+POST - localhost:8080/api/users
+
+### Get all users
+GET - localhost:8080/api/users
+
