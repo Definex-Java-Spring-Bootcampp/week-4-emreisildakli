@@ -1,16 +1,9 @@
 package com.patika.kredinbizdeservice.repository;
 
 import com.patika.kredinbizdeservice.model.Application;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
-import java.util.ArrayList;
-import java.util.List;
+public interface ApplicationRepository extends MongoRepository<Application, Long> {
 
-public class ApplicationRepository {
 
-    private List<Application> applicationList = new ArrayList<>();
-
-    public Application save(Application application) {
-        applicationList.add(application);
-        return application;
-    }
 }

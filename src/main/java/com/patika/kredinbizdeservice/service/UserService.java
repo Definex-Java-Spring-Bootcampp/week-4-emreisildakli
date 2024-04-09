@@ -20,7 +20,7 @@ import java.util.Random;
 @RequiredArgsConstructor
 public class UserService {
 
-    private UserRepository userRepository = new UserRepository();
+    private final UserRepository userRepository;
 
     private final NotificationProducer notificationProducer;
 
@@ -47,7 +47,7 @@ public class UserService {
 
     public List<User> getAll() {
         System.out.println("userRepository: " + userRepository.hashCode());
-        return userRepository.getAll();
+        return userRepository.findAll();
     }
 
 
@@ -80,7 +80,7 @@ public class UserService {
         return foundUser.get();
     }
 
-    public User getById(Long userId) {
-        return userRepository.findByUserId(userId);
+    public Optional<User> getById(Long userId) {
+        return userRepository.findById(userId);
     }
 }

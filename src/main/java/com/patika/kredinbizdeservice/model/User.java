@@ -1,8 +1,12 @@
 package com.patika.kredinbizdeservice.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.time.LocalDate;
 import java.util.List;
 
+@Document("user")
 public class User {
 
     private String name;
@@ -13,6 +17,7 @@ public class User {
     private String phoneNumber;
     private Boolean isActive;
     private List<Application> applicationList;
+    @Id
     private Long userId;
 
     public User() {
