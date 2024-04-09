@@ -80,7 +80,7 @@ public class UserService {
         return foundUser.get();
     }
 
-    public Optional<User> getById(Long userId) {
-        return userRepository.findById(userId);
+    public User getById(Long userId) {
+        return userRepository.findById(userId).get();
     }
 }
