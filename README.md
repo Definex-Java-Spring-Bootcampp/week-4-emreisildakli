@@ -40,3 +40,7 @@ POST - localhost:8080/api/users
 ### Get all users
 GET - localhost:8080/api/users
 
+https://github.com/emreisildakli/OnlineShop
+https://github.com/emreisildakli/GarantiService
+https://github.com/emreisildakli/OnlineShopGW
+https://github.com/emreisildakli/OnlineShop-discovery
