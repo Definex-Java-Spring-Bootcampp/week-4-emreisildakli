@@ -28,15 +28,15 @@
 
 ## Endpoints
 
-# Save application
+### Save application
 POST - localhost:8080/api/applications
 
-# Get applications by email
+### Get applications by email
 GET - localhost:8080/api/applications/${email}
 
-# Save user
+### Save user
 POST - localhost:8080/api/users
 
-# Get all users
+### Get all users
 GET - localhost:8080/api/users
 
