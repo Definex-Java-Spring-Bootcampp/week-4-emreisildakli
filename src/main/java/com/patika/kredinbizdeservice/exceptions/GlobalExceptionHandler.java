@@ -26,7 +26,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ExceptionResponse> handleAllException(Exception exception) {
-        kafkaProducer.sendMessage("exception", exception.getMessage());
+        kafkaProducer.sendMessage("exception", exception.getMessage());// bu topic'i okuyan service nerede?
         log.error("exception occurred. {0}", exception.getCause());
 
         return ResponseEntity
